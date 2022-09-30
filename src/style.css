@@ -1,0 +1,163 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: "Poppins", sans-serif;
+    position: relative;
+    overflow-y: scroll;
+}
+
+header{
+    display: flex;
+    flex-direction: column;
+    min-height: 25vh;
+    justify-content: center;
+    align-items: center;
+}
+
+header h2{
+    padding: 1rem;
+    font-size: 5rem;
+}
+
+#logo{
+    text-decoration: none;
+    color: black;
+}
+
+.search{
+    display: flex;
+    justify-content: space-around;
+}
+
+.search-form input{
+    font-size: 2rem;
+    padding: 0.5rem;
+    width: 100%;
+    border: 2px solid rgb(74, 68, 131);
+    outline: none;
+}
+
+.submit-btn, .delete-btn{
+    border: none;
+    padding: 0.5rem;
+    font-size: 1rem;
+    background: rgb(74, 68, 131);
+    color: white;
+    cursor: pointer;
+    width: 40px;
+}
+
+.submit-btn:active i, .delete-btn:active i{
+    transform: scale(.9);
+}
+
+.result{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.gallery-info{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: rgb(85, 85, 85);
+    padding: 0.5rem 1rem;
+}
+
+.gallery-info a{
+    color: rgb(85, 85, 85);
+}
+
+.gallery{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    padding: 2rem 0rem;
+    width: 80%;
+    margin: auto;
+    row-gap: 5rem;
+    column-gap: 3rem;
+}
+
+.gallery-img .span{
+    width: 99%;
+    height: 99%;
+    border-radius: 10px;
+    box-shadow: 8px 8px 5px rgb(155, 155, 155);
+}
+
+.gallery-img img{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.nav-button{
+    min-height: 15vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.more{
+    padding: 1rem 3rem;
+    background: rgb(74, 68, 131);
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 1.2rem;
+    display: none;
+    transition: all 0.2s ease;
+}
+
+.more.active{
+    box-shadow: 5px 5px 10px gray;
+    border-radius: 5px;
+    display: block;
+}
+
+.no-results{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.back-to-top, .back-to-bottom, .refresh{
+    position: fixed;
+    right: 1vw;
+    height: 50px;
+    width: 50px;
+    background: rgb(74, 68, 131);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    color: white;
+    cursor: pointer;
+    box-shadow: 5px 5px 10px gray;
+    transition: all 0.2s ease;
+}
+
+.refresh{
+    bottom: 18vh;
+}
+
+.back-to-top{
+    bottom: 11vh;
+}
+
+.back-to-bottom{
+    bottom: 4vh;
+}
+
+.back-to-bottom:active, .back-to-top:active, .more.active:active, .refresh:active{
+    transform: scale(0.9);
+    background: rgb(54, 47, 109);
+}
