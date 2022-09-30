@@ -1,3 +1,4 @@
+const key = "563492ad6f91700001000001bb80473686d8494c82818e1ab9ec6138";
 const gallery = document.querySelector('.gallery');
 const searchInput = document.querySelector('.search-input');
 const form = document.querySelector('.search-form');
@@ -9,7 +10,6 @@ const resultDiv = document.querySelector('.result');
 const subtmitBtn = document.querySelector('.submit-btn');
 const deleteBtn = document.querySelector('.delete-btn');
 const refresh = document.querySelector('.refresh');
-let searchValue;
 let page = 1;
 let fetchLink;
 let currentSearch;
